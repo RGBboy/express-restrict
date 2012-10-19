@@ -39,12 +39,19 @@
 
 ## Requires
 
-  * Sessions
-  * Express Authenticate
-  * Express Flash
+### Middleware
+
+  The following middleware should be used by the application to use the 
+  Restrict Component:
+
+  * express.cookieParser
+  * express.session
+  * express-authenticate
+  * express-flash
 
 ## Todo
 
+  * Change redirect to signin page using req.routeToPath('signin')
   * Write process helpers for other components to use for integration tests.
   * Write example
   * Write tests
