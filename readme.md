@@ -54,7 +54,7 @@
   * Change redirect to signin page using req.routeToPath('signin')
   * Write process helpers for other components to use for integration tests.
   * Write example
-  * Write tests
+  * Fix broken test
 
 ## License 
 
