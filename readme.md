@@ -1,6 +1,6 @@
 # Express Restrict
 
-  User restrictions for your Express Application
+  User restrictions for your Express Application.
 
   [![Build Status](https://secure.travis-ci.org/RGBboy/express-restrict.png)](http://travis-ci.org/RGBboy/express-restrict)
 
@@ -9,7 +9,6 @@
   Works with Express 3.0.x
 
     npm install git://github.com/RGBboy/express-restrict.git
-
 
 ## Usage
 
@@ -37,6 +36,12 @@
 
 ```
 
+## Redirection
+
+When a resource is restricted, users that are not authenticated will be redirected to your signin path.
+
+Users that are authenticated and are restricted will be redirected to the root path '/'.
+
 ## Requires
 
 ### Middleware
@@ -48,13 +53,16 @@
   * express.session
   * express-authenticate
   * express-flash
+  * express-named-routes
+
+### Express Named Routes
+
+  Express Restrict requires a path to be returned for the 'signin' route via the `request.routeToPath` method.
 
 ## Todo
 
-  * Change redirect to signin page using req.routeToPath('signin')
   * Write process helpers for other components to use for integration tests.
   * Write example
-  * Fix broken test
 
 ## License 
 
