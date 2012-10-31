@@ -1,0 +1,58 @@
+!!! 5
+html
+  head
+    title= title
+    block stylesheets
+      link(rel = 'stylesheet', href = '/css/style.css')
+      link(rel = 'stylesheet', href = '/css/bootstrap.min.css')
+      link(rel = 'stylesheet', href = '/css/bootstrap-responsive.min.css') 
+  body
+    .container-fluid
+      .messages
+        - if (messages.info)
+          - each message in messages.info
+            .alert.alert-success
+              button.close(type = 'button', data-dismiss = 'alert') ×
+              strong Info: 
+              span= message
+        - if (messages.warning)
+          - each message in messages.warning
+            .alert.alert-warning
+              button.close(type = 'button', data-dismiss = 'alert') ×
+              strong Warning: 
+              span= message
+        - if (messages.error)
+          - each message in messages.error
+            .alert.alert-error
+              button.close(type = 'button', data-dismiss = 'alert') ×
+              strong Error: 
+              span= message
+      .main.row-fluid
+        .span3
+          ul.well.nav.nav-list
+            li
+              a(href = '/') Home
+            - if (locals.authenticatedUser)
+              li.divider
+              - if (locals.authenticatedUser.role === 'admin' || locals.authenticatedUser.role === 'user')
+                li
+                  a(href = '/restrict-to-user-and-admin') Users or Admin Only
+              - if (locals.authenticatedUser.role === 'admin')
+                li
+                  a(href = '/restrict-to-admin') Admin Only
+              li.divider
+              li
+                a(href = '/signout') Sign Out
+            - else
+              li.divider
+              li
+                a(href = '/signup') Sign Up
+              li
+                a(href = '/signin') Sign In
+            
+        .span9
+          h1.page-header= title
+          block content
+    block javascripts
+      script(src = '/js/jquery-1.8.0.min.js')
+      script(src = '/js/bootstrap.min.js')

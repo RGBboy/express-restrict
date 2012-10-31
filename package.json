@@ -12,7 +12,17 @@
   "dependencies": {
   },
   "devDependencies": {
+    "express": "3.0.x",
+    "jade": "0.27.x",
+    "mongoose": "3.3.x",
+    "express-named-routes": "0.0.x",
+    "express-authenticate": "git://github.com/RGBboy/express-authenticate.git",
+    "express-flash": "git://github.com/RGBboy/express-flash.git",
+    "express-signin": "git://github.com/RGBboy/express-signin.git",
+    "express-signup": "git://github.com/RGBboy/express-signup.git",
+    "basic-user-model": "git://github.com/RGBboy/basic-user-model.git",
     "mocha": "1.5.x",
+    "superagent": "0.9.x",
     "should": "1.2.x",
     "sinon": "1.5.x"
   },

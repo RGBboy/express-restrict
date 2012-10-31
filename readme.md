@@ -59,6 +59,15 @@ Users that are authenticated and are restricted will be redirected to the root p
 
   Express Restrict requires a path to be returned for the 'signin' route via the `request.routeToPath` method.
 
+## Setting Up Development
+
+  In order to develop and run tests with the supplied example you will need to set up MongoDB with two databases:
+
+  * express-restrict-dev
+  * express-restrict-test
+
+The usernames and passwords for each are the same as their database names.
+
 ## Todo
 
   * Write process helpers for other components to use for integration tests.
