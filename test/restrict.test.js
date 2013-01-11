@@ -88,8 +88,8 @@ describe('Restrict', function () {
       describe('when passed a string', function () {
 
         beforeEach(function (done) {
-          fakeReq.authenticatedUser = { role: 'admin' };
-          returnedFunction = restrict.to('role', 'admin');
+          fakeReq.authenticatedUser = { role: 'super-admin' };
+          returnedFunction = restrict.to('role', 'super-admin');
           done();
         });
 
@@ -107,8 +107,8 @@ describe('Restrict', function () {
         describe('when property does not match the authenticated users', function () {
 
           beforeEach(function (done) {
-            fakeReq.authenticatedUser = { role: 'user' };
-            returnedFunction = restrict.to('role', 'admin');
+            fakeReq.authenticatedUser = { role: 'admin' };
+            returnedFunction = restrict.to('role', 'super-admin');
             done();
           });
 
@@ -142,8 +142,8 @@ describe('Restrict', function () {
       describe('when passed an array', function () {
 
         beforeEach(function (done) {
-          fakeReq.authenticatedUser = { role: 'admin' };
-          returnedFunction = restrict.to( 'role', ['testRole', 'admin'] );
+          fakeReq.authenticatedUser = { role: 'super-admin' };
+          returnedFunction = restrict.to( 'role', ['testRole', 'super-admin'] );
           done();
         });
 
@@ -161,7 +161,7 @@ describe('Restrict', function () {
         describe('when property does not match the authenticated users', function () {
 
           beforeEach(function (done) {
-            fakeReq.authenticatedUser = { role:'user' };
+            fakeReq.authenticatedUser = { role:'admin' };
             done();
           });
 

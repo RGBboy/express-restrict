@@ -71,7 +71,7 @@ The usernames and passwords for each are the same as their database names.
 ## Todo
 
   * Write process helpers for other components to use for integration tests.
-  * Write example
+  * Update usage to include setting express-named-routes and 'signin' route.
 
 ## License 
 
