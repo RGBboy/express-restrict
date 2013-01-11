@@ -1,6 +1,6 @@
 {
   "name": "express-restrict",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "User Restriction for your Express Application",
   "homepage": "https://github.com/RGBboy/express-restrict",
   "keywords": ["express", "restrict", "user"],
