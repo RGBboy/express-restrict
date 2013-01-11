@@ -8,7 +8,7 @@
 
   Works with Express 3.0.x
 
-    npm install git://github.com/RGBboy/express-restrict.git
+    npm install express-restrict
 
 ## Usage
 
