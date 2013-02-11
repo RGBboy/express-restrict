@@ -23,7 +23,7 @@
 
   app.use(express.cookieParser('miyahamiyahimiyahemiyahoho'));
   app.use(express.session({ cookie: { maxAge: 60000 }}));
-  app.use(authenticate());
+  app.use(authenticate(UserModel));
   app.use(flash());
 
   app.get('/restrict-to-admin', restrict.to('role', 'admin'), function (req, res) {
