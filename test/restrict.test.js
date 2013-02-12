@@ -39,6 +39,8 @@ describe('Restrict', function () {
 
       beforeEach(function (done) {
         fakeReq = {
+          url: '/',
+          session: {},
           flash: function () {},
           authenticatedUser: {},
           routeToPath: function (routeName) {
@@ -67,6 +69,13 @@ describe('Restrict', function () {
             done();
           }
           returnedFunction(fakeReq, fakeRes, fakeNext);
+        });
+
+        it('should add the current url to req.session.redirect', function (done) {
+          fakeReq.url = '/test-url';
+          returnedFunction(fakeReq, fakeRes, fakeNext);
+          fakeReq.session.redirect.should.equal('/test-url');
+          done();
         });
 
         it('should redirect to signin route', function (done) {
