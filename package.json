@@ -1,6 +1,6 @@
 {
   "name": "express-restrict",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "User Restriction for your Express Application",
   "homepage": "https://github.com/RGBboy/express-restrict",
   "keywords": ["express", "restrict", "user"],
@@ -19,7 +19,7 @@
     "storekeeper": "0.0.x",
     "attach": "0.0.x",
     "express-named-routes": "0.0.x",
-    "express-authenticate": "git://github.com/RGBboy/express-authenticate.git",
+    "express-authenticate": "0.0.x",
     "express-flash": "git://github.com/RGBboy/express-flash.git",
     "express-signin": "git://github.com/RGBboy/express-signin.git",
     "express-signup": "git://github.com/RGBboy/express-signup.git",
